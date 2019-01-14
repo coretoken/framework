@@ -1,0 +1,63 @@
+{
+  "name": "@coretoken/framework",
+  "version": "0.1.0",
+  "description": "Core Token Framework for Smart Contracts development",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "truffle compile",
+    "test": "truffle test",
+    "audit": "npm run audit-mythril-json && npm run audit-mythril-md && npm run audit-slither-json && npm run graphs",
+    "deploy": "truffle migrate",
+    "fluid": "truffle migrate --network fluid",
+    "audit-mythril-json": "sh ./scripts/audit-mythril-json.sh",
+    "audit-mythril-md": "sh ./scripts/audit-mythril-markdown.sh",
+    "audit-slither-json": "sh ./scripts/audit-slither-json.sh",
+    "audit-slither-md": "sh ./scripts/audit-slither-markdown.sh",
+    "install-mythril": "pip3 install mythril",
+    "install-slither": "pip3 install slither-analyzer",
+    "install-solograph": "npm install -g solgraph",
+    "install-graphviz": "brew install graphviz",
+    "graphs": "npm run graph-solgraph && npm run graph-slither",
+    "graph-solgraph": "sh ./scripts/graph-solgraph.sh",
+    "graph-slither": "sh ./scripts/graph-slither.sh",
+    "docs": "sh ./scripts/docs.sh",
+    "mint": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coretoken/framework.git"
+  },
+  "keywords": [
+    "core",
+    "core-token",
+    "coretoken",
+    "token",
+    "framework"
+  ],
+  "author": "Core Token <contact@coretoken.net> (https://coretoken.net)",
+  "license": "MIT",
+  "contributors": [
+    "Rastislav (https://github.com/raisty)"
+  ],
+  "bugs": {
+    "url": "https://github.com/coretoken/framework/issues"
+  },
+  "homepage": "https://github.com/coretoken/framework#readme",
+  "devDependencies": {
+    "any-promise": "^1.3.0",
+    "bindings": "^1.3.1",
+    "mocha": "^5.2.0",
+    "solgraph": "^0.3.3",
+    "truffle-hdwallet-provider": "^1.0.0-web3one.5"
+  },
+  "files": [
+    "truffle-config.js",
+    "contracts/",
+    "migrations/",
+    "scripts/",
+    "test/"
+  ]
+}
