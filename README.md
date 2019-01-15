@@ -48,4 +48,4 @@ You can run it with:
 Thank you.
 
 ## License
-Code released under the [MIT license](https://github.com/coretoken/blob/master/LICENSE).
+Code released under the [MIT license](https://github.com/coretoken/framework/blob/master/LICENSE).
